@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style media="screen">
+      .html{
+        scroll-behavior: smooth;
+      }
+      #topline1{
+        padding-bottom: 32%;
+      }
+      .restlogo{
+        width:80%;
+        height:80%;
+        margin-right:0%;
+        padding-top:4%;
+      }
+      .div1{
+        position:fixed;
+        padding-bottom:0%;
+        margin-top: -1%;
+        width:69.4%;  
+      }
+      .table1{
+        border-bottom: 1px solid black;
+      }
+      .tr1{
+        background-color:white;
+      }
+      .td1{
+        padding-left:10%;
+        width:30%;
+        margin-left:20%;
+        padding-bottom: 2%;
+      }
+      .name{
+        font-size: 400%;
+        padding-left:15%;
+        color:orange;
+      }
+      .dis{
+        color:black;
+        font-size:100%;
+        padding-left:15%;
+      }
+      .items{
+        padding-top:5%;
+        text-align:right;
+      }
+      #table2{
+        width:100%;
+        padding-top:0%;
+      }
+      #td2{
+        padding-left:16%;
+        padding-top:5%;
+        padding-right:0%;
+        width:30%;
+        vertical-align:top;
+      }
+      .table3{
+        width:10%;
+        position: fixed;
+        margin-top: 20%;
+        margin-left:0%;
+      }
+      #statters,#tiffins,#rice,#tikkas,#soups,#rotis,#currys{
+        text-decoration: none;
+      }
+      #heading1{
+        font-size: 200%;
+      }
+      .veg,.nonveg{
+        width:2%;
+        height:2%;
+        padding-left: 0%;
+      }
+      .flex1{
+        display:flex;
+        padding-top:2%;
+        padding-right:2%;
+      }
+      .dosa{
+        width:60%;
+        height:50%;
+        align:right;
+      }
+      .tditem{
+        padding-left: 5%;
+        border-left: 1px solid black;
+        width:40%;
+        border-right: 1px solid black;
+        padding-top:0%;
+      }
+      #tiffins:hover{
+        color:orange;
+      }
+      #rice:hover{
+        color:orange;
+      }
+      #tikkas:hover{
+        color:orange;
+      }
+      #soups:hover{
+        color:orange;
+      }
+      #rotis:hover{
+        color:orange;
+      }
+      #currys:hover{
+        color:orange;
+      }
+      #statters:hover{
+        color:orange;
+      }
+      .smallimg{
+        width:29%;
+      }
+      #dosaspace{
+        width:60%;
+      }
+      #dosaadd{
+        color:green;
+        font-weight: bolder;
+        margin-top:2%;
+        margin-left:12%;
+        margin-bottom: 20%;
+        padding-left:4%;
+        padding-right:4%;
+      }
+      .divadd{
+        padding-left:10%;
+      }
+      .hrbtw,#hrbtw1,#hrbtw2{
+        width:70%;
+        margin-left:5%;
+      }
+      #bill{
+        font-size: 300%;
+        color: rgba(0,0,0,0.5);
+       padding-top: 1%;
+       padding-left:15%;
+       padding-bottom:2%;
+      }
+      #addamount{
+        padding-left: 10%;
+      }
+      #noofitems{
+        padding-top:0%;
+        padding-left: 0%;
+        margin-top:2%;
+        margin-left: 0%;
+        margin-bottom:1%;
+      }
+      #tdright{
+        position: fixed;
+        margin-top: 1px solid black;
+        margin-top:12%;
+        margin-left:5%;
+        width:40%;
+      }
+      #table{
+        margin-left:5%;
+      }
+      .puri,.mixedchinesefriedrice,.idly,.bajji,.vadapav,.pavbhaji,.vegfriedrice,.vadapav,.jeerarice,.gobifriedrice,.mushroomfriedrice,.schezwanfriedrice,.paneerfriedrice{
+        width:60%;
+        height:50%;
+        align:right;
+        padding-left:4%;
+      }
+      #bajjispace,#gobi65space,#paneertikkaspace,#eggfriedricespace{
+        width:60%;
+      }
+      #vegfriedricespace,#gobifriedricespace,#mushroomfriedricespace,#schezwanfriedricespace,#paneerfriedricespace{
+        width:48%;
+      }
+      #vadapavspace,#jeeraricespace,#mixedchinesefriedricespace,#chickenfriedricespace,#schezwanchickenfriedricespace,
+      #muttonfriedricespace,#mixnonvegfriedricespace,#paneermalaitikkaspace,#mushroomtikkaspace,#tandoorigobispace,#seabeespltikkaspace
+      ,#gobimanchuriaspace,#chillygobispace{
+        width:55%;
+      }
+      #pavbhajispace{
+        width:55%;
+      }
+      #nofdosa{
+        padding-left:3%;
+        padding-right:3%;
+      }
+      #nofpuri{
+        padding-left:3%;
+        padding-right:3%;
+      }
+      #nofidly{
+        padding-left:3%;
+        padding-right:3%;
+      }
+      #nofbajji{
+        padding-left:3%;
+        padding-right:3%;
+      }
+      #nofvadapav{
+        padding-left:3%;
+        padding-right:3%;
+      }
+      #nofpavbhaji,#nofeggfriedrice,#nofpannermalaitikka,#nofseabeespltikka,#nofvegfriedrice,#nofjeerarice,#nofgobifriedrice,#nofmushroomfriedrice,#nofschezwanfriedrice,#nofpaneerfriedrice,#nofmixedchinesefriedrice,#nofmixedchinesefriedrice,#nofchickenfriedrice,
+      #nofschezwanchickenfriedrice,#nofmuttonfriedrice,#nofmixnonvegfriedrice,#nofpaneertikka,#nofpaneermalaitikka,#nofmushroomtikka,#noftandoorigobi,#nofseabeespltikka,#nofgobimanchuria,#nofgobi65,#nofchillygobi{
+        padding-left:3%;
+        padding-right:3%;
+      }
+      #itemadded{
+        padding-top: 0%;
+        padding-bottom: 0%;
+        margin-bottom: 0%;
+        margin-top: 0%;
+      }
+      .width2{
+        width:350px;
+        height:150px;
+        overflow: hidden;
+        overflow-y: scroll;
+      }
+      .scroll{
+        width:50%;
+        height:30%;
+        margin-right: 7%;
+      }
+      #printbill{
+        background-color: orange;
+        color:white;
+        font-size: 90%;
+        border-color: orange;
+        margin-left:17%;
+      }
+      #split{
+        background-color:orange;
+        color:white;
+        font-size: 90%;
+        border-color:orange;
+        border-radius: 5%;
+        margin-left: 5%;
+      }
+      #nofpersons{
+        width:30%;
+        padding-left:10%;
+      }
+    </style>
+    <title>Bill</title>
+    <link rel="icon" href="images/restlogo3.png">
+  </head>
+  <body>
+    <div class="div1">
+      <table class="table1">
+        <tr class="tr1">
+          <td class="td1"><img class="restlogo" src="images/restlogo3.png" alt="No Image"> </td>
+          <td> <span class="name">Seabee</span><br><span class="dis">Have a great food!..</span>
+            <br>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="div2">
+      <table id="table2">
+        <tr id="tb2tr">
+          <td id="td2">
+              <table class="table3">
+                <tr>
+                  <td class="items"><a id="statters" href="">Statters</a></td>
+                </tr>
+                <tr>
+                  <td class="items"><a id="tiffins" href="#topline1">Tiffins</a></td>
+                </tr>
+                <tr>
+                  <td class="items"> <a id="rice" href="#hrbtw1">Rice</a></td>
+                </tr>
+                <tr>
+                  <td class="items"><a id="tikkas" href="#hrbtw2">Tikkas</a></td>
+                </tr>
+                <tr>
+                  <td class="items"><a id="soups" href="">Soups</a></td>
+                </tr>
+                <tr>
+                  <td class="items"><a id="rotis" href="">Rotis</a></td>
+                </tr>
+                <tr>
+                  <td class="items"><a id="currys" href="">Currys</a></td>
+                </tr>
+              </table>
+          </td>
+          <td class="tditem">
+            <hr id="topline1">
+            <p id="heading1"> Tiffins</p>
+            <img class="veg" src="images/veg.jpg" alt="no image">
+            <div class="flex1">
+              <div>Dosa <br><br>₹49</div>
+              <div id="dosaspace"></div>
+              <div class="smallimg"> <img class="dosa" src="images/dosa.jpg" alt="no image"><div class="divadd"> <input onclick="dosaminus()" id="dosaminus" type="button" name="-" value="-"><span id="nofdosa"></span><input onclick="dosaplus()" type="button" name="+" value="+" id="dosaplus"></div></div>
+              </div>
+              <hr class="hrbtw">
+              <img class="veg" src="images/veg.jpg" alt="no image">
+            <div class="flex1">
+              <div>Puri <br><br>₹30</div>
+              <div id="dosaspace"></div>
+              <div class="smallimg"> <img class="dosa" src="images/puri.webp" alt="no image"><div class="divadd"> <input onclick="puriminus()" id="dosaminus" type="button" name="-" value="-"><span id="nofpuri"></span><input onclick="puriplus()" type="button" name="+" value="+" id="puriplus"></div></div>
+              </div>
+              <hr class="hrbtw">
+              <img class="veg" src="images/veg.jpg" alt="no image">
+            <div class="flex1">
+              <div>Idly <br><br>₹20</div>
+              <div id="dosaspace"></div>
+              <div class="smallimg"> <img class="dosa" src="images/idly.jpg" alt="no image"><div class="divadd"> <input onclick="idlyminus()" id="dosaminus" type="button" name="-" value="-"><span id="nofidly"></span><input onclick="idlyplus()" type="button" name="+" value="+" id="idlyplus"></div></div>
+              </div>
+              <hr class="hrbtw">
+              <img class="veg" src="images/veg.jpg" alt="no image">
+              <div class="flex1">
+              <div>Bajji <br><br>₹40</div>
+              <div id="bajjispace"></div>
+              <div class="smallimg"> <img class="dosa" src="images/bajji.jpg" alt="no image"><div class="divadd"> <input onclick="bajjiminus()" id="bajjiminus" type="button" name="-" value="-"><span id="nofbajji"></span><input onclick="bajjiplus()" type="button" name="+" value="+" id="bajjiplus"></div></div>
+              </div>
+              <hr id="hrbtw1">
+              <img class="veg" src="images/veg.jpg" alt="no image">
+              <div class="flex1">
+              <div>Vadapav <br><br>₹30</div>
+              <div id="vadapavspace"></div>
+              <div class="smallimg"> <img class="dosa" src="images/vadapav.webp" alt="no image"><div class="divadd"> <input onclick="vadapavminus()" id="vadapavminus" type="button" name="-" value="-"><span id="nofvadapav"></span><input onclick="vadapavplus()" type="button" name="+" value="+" id="vadapavplus"></div></div>
+              </div>
+              <hr class="hrbtw">
+              <img class="veg" src="images/veg.jpg" alt="no image">
+              <div class="flex1">
+              <div>Pavbhaji <br><br>₹30</div>
+              <div id="pavbhajispace"></div>
+              <div class="smallimg"> <img class="dosa" src="images/pavbhaji.jpg" alt="no image"><div class="divadd"> <input onclick="pavbhajiminus()" id="pavbhajiminus" type="button" name="-" value="-"><span id="nofpavbhaji"></span><input onclick="pavbhajiplus()" type="button" name="+" value="+" id="pavbhajiplus"></div></div>
+              </div>
+              <hr class="hrbtw">
+              <p id="heading1"> Rice</p>
+              <img class="veg" src="images/veg.jpg" alt="no image">
+              <div class="flex1">
+              <div>Veg Fried Rice <br><br>₹100</div>
+              <div id="vegfriedricespace"></div>
+              <div class="smallimg"> <img class="dosa" src="images/vegfriedrice.jpg" alt="no image"><div class="divadd"> <input onclick="vegfriedriceminus()" id="vegfriedriceminus" type="button" name="-" value="-"><span id="nofvegfriedrice"></span><input onclick="vegfriedriceplus()" type="button" name="+" value="+" id="vegfriedriceplus"></div></div>
+              </div>
+              <hr class="hrbtw">
+              <img class="veg" src="images/veg.jpg" alt="no image">
+              <div class="flex1">
+              <div>Jeera Rice <br><br>₹110</div>
+              <div id="jeeraricespace"></div>
+              <div class="smallimg"> <img class="jeerarice" src="images/jeerarice.jpg" alt="no image"><div class="divadd"> <input onclick="jeerariceminus()" id="jeerariceminus" type="button" name="-" value="-"><span id="nofjeerarice"></span><input onclick="jeerariceplus()" type="button" name="+" value="+" id="jeerariceplus"></div></div>
+              </div>
+              <hr class="hrbtw">
+              <img class="veg" src="images/veg.jpg" alt="no image">
+              <div class="flex1">
+              <div>Gobi Fried Rice <br><br>₹120</div>
+              <div id="gobifriedricespace"></div>
+              <div class="smallimg"> <img class="gobifriedrice" src="images/gobifriedrice.jpg" alt="no image"><div class="divadd"> <input onclick="gobifriedriceminus()" id="gobifriedriceminus" type="button" name="-" value="-"><span id="nofgobifriedrice"></span><input onclick="gobifriedriceplus()" type="button" name="+" value="+" id="gobifriedriceplus"></div></div>
+              </div>
+              <hr class="hrbtw">
+              <img class="veg" src="images/veg.jpg" alt="no image">
+              <div class="flex1">
+              <div>Mushroom Fried Rice <br><br>₹130</div>
+              <div id="mushroomfriedricespace"></div>
+              <div class="smallimg"> <img class="mushroomfriedrice" src="images/mushroomfriedrice.jpg" alt="no image"><div class="divadd"> <input onclick="mushroomfriedriceminus()" id="mushroomfriedriceminus" type="button" name="-" value="-"><span id="nofmushroomfriedrice"></span><input onclick="mushroomfriedriceplus()" type="button" name="+" value="+" id="mushroomfriedriceplus"></div></div>
+              </div>
+              <hr class="hrbtw">
+              <img class="veg" src="images/veg.jpg" alt="no image">
+              <div class="flex1">
+              <div>Schezwan Fried Rice <br><br>₹120</div>
+              <div id="schezwanfriedricespace"></div>
+              <div class="smallimg"> <img class="schezwanfriedrice" src="images/schezwanfriedrice.jpg" alt="no image"><div class="divadd"> <input onclick="schezwanfriedriceminus()" id="schezwanfriedriceminus" type="button" name="-" value="-"><span id="nofschezwanfriedrice"></span><input onclick="schezwanfriedriceplus()" type="button" name="+" value="+" id="schezwanfriedriceplus"></div></div>
+              </div>
+              <hr class="hrbtw">
+              <img class="veg" src="images/veg.jpg" alt="no image">
+              <div class="flex1">
+              <div>Paneer Fried Rice <br><br>₹140</div>
+              <div id="paneerfriedricespace"></div>
+              <div class="smallimg"> <img class="paneerfriedrice" src="images/paneerfriedrice.jpg" alt="no image"><div class="divadd"> <input onclick="paneerfriedriceminus()" id="paneerfriedriceminus" type="button" name="-" value="-"><span id="nofpaneerfriedrice"></span><input onclick="paneerfriedriceplus()" type="button" name="+" value="+" id="paneerfriedriceplus"></div></div>
+              </div>
+              <hr class="hrbtw">
+              <img class="veg" src="images/nonveg.png" alt="no image">
+                <div class="flex1">
+                <div>Mixed Chinese Fried Rice <br><br>₹180</div>
+                <div id="mixedchinesefriedricespace"></div>
+                <div class="smallimg"> <img class="mixedchinesefriedrice" src="images/mixedchinesefriedrice.jpg" alt="no image"><div class="divadd"> <input onclick="mixedchinesefriedriceminus()" id="mixedchinesefriedriceminus" type="button" name="-" value="-"><span id="nofmixedchinesefriedrice"></span><input onclick="mixedchinesefriedriceplus()" type="button" name="+" value="+" id="mixedchinesefriedriceplus"></div></div>
+                </div>
+                <hr class="hrbtw"><img class="veg" src="images/nonveg.png" alt="no image">
+                <div class="flex1">
+                <div>Egg Fried Rice <br><br>₹130</div>
+                <div id="eggfriedricespace"></div>
+                <div class="smallimg"> <img class="dosa" src="images/eggfriedrice.jpg" alt="no image"><div class="divadd"> <input onclick="eggfriedriceminus()" id="eggfriedriceminus" type="button" name="-" value="-"><span id="nofeggfriedrice"></span><input onclick="eggfriedriceplus()" type="button" name="+" value="+" id="eggfriedriceplus"></div></div>
+                </div>
+                <hr class="hrbtw"><img class="veg" src="images/nonveg.png" alt="no image">
+                <div class="flex1">
+                <div>Chicken Fried Rice <br><br>₹160</div>
+                <div id="chickenfriedricespace"></div>
+                <div class="smallimg"> <img class="dosa" src="images/chickenfriedrice.jpg" alt="no image"><div class="divadd"> <input onclick="chickenfriedriceminus()" id="chickenfriedriceminus" type="button" name="-" value="-"><span id="nofchickenfriedrice"></span><input onclick="chickenfriedriceplus()" type="button" name="+" value="+" id="chickenfriedriceplus"></div></div>
+                </div>
+                <hr class="hrbtw">
+                <img class="veg" src="images/nonveg.png" alt="no image">
+                <div class="flex1">
+                <div>Schezwan Chicken Fried Rice <br><br>₹180</div>
+                <div id="schezwanchickenfriedricespace"></div>
+                <div class="smallimg"> <img class="dosa" src="images/schezwanchickenfriedrice.jpg" alt="no image"><div class="divadd"> <input onclick="schezwanchickenfriedriceminus()" id="schezwanchickenfriedriceminus" type="button" name="-" value="-"><span id="nofschezwanchickenfriedrice"></span><input onclick="schezwanchickenfriedriceplus()" type="button" name="+" value="+" id="schezwanchickenfriedriceplus"></div></div>
+                </div>
+                <hr id="hrbtw2">
+                <img class="veg" src="images/nonveg.png" alt="no image">
+                <div class="flex1">
+                <div>Mutton Fried Rice <br><br>₹220</div>
+                <div id="muttonfriedricespace"></div>
+                <div class="smallimg"> <img class="dosa" src="images/muttonfriedrice.jpg" alt="no image"><div class="divadd"> <input onclick="muttonfriedriceminus()" id="muttonfriedriceminus" type="button" name="-" value="-"><span id="nofmuttonfriedrice"></span><input onclick="muttonfriedriceplus()" type="button" name="+" value="+" id="muttonfriedriceplus"></div></div>
+                </div>
+                <hr class="hrbtw">
+                <img class="veg" src="images/nonveg.png" alt="no image">
+                <div class="flex1">
+                <div>Mix Non-Veg Fried Rice <br><br>₹250</div>
+                <div id="mixnonvegfriedricespace"></div>
+                <div class="smallimg"> <img class="dosa" src="images/mixnonvegfriedrice.jpg" alt="no image"><div class="divadd"> <input onclick="mixnonvegfriedriceminus()" id="mixnonvegfriedriceminus" type="button" name="-" value="-"><span id="nofmixnonvegfriedrice"></span><input onclick="mixnonvegfriedriceplus()" type="button" name="+" value="+" id="mixnonvegfriedriceplus"></div></div>
+                </div>
+                <hr class="hrbtw">
+                <p id="heading1"> Tikkas</p>
+                <img class="veg" src="images/veg.jpg" alt="no image">
+                <div class="flex1">
+                <div>Paneer Tikka <br><br>₹150</div>
+                <div id="paneertikkaspace"></div>
+                <div class="smallimg"> <img class="dosa" src="images/paneertikka.jpg" alt="no image"><div class="divadd"> <input onclick="paneertikkaminus()" id="paneertikkaminus" type="button" name="-" value="-"><span id="nofpaneertikka"></span><input onclick="paneertikkaplus()" type="button" name="+" value="+" id="paneertikkaplus"></div></div>
+                </div>
+                <hr class="hrbtw">
+                <img class="veg" src="images/veg.jpg" alt="no image">
+                <div class="flex1">
+                <div>Paneer Malai Tikka <br><br>₹170</div>
+                <div id="paneermalaitikkaspace"></div>
+                <div class="smallimg"> <img class="dosa" src="images/paneermalaitikka.jpg" alt="no image"><div class="divadd"> <input onclick="paneermalaitikkaminus()" id="paneermalaitikkaminus" type="button" name="-" value="-"><span id="nofpaneermalaitikka"></span><input onclick="paneermalaitikkaplus()" type="button" name="+" value="+" id="paneermalaitikkaplus"></div></div>
+                </div>
+                <hr class="hrbtw">    
+                <img class="veg" src="images/veg.jpg" alt="no image">
+                  <div class="flex1">
+                  <div>Mushroom Tikka <br><br>₹150</div>
+                  <div id="mushroomtikkaspace"></div>
+                  <div class="smallimg"> <img class="dosa" src="images/mushroomtikka.webp" alt="no image"><div class="divadd"> <input onclick="mushroomtikkaminus()" id="mushroomtikkaminus" type="button" name="-" value="-"><span id="nofmushroomtikka"></span><input onclick="mushroomtikkaplus()" type="button" name="+" value="+" id="mushroomtikkaplus"></div></div>
+                  </div>
+                  <hr class="hrbtw">
+                  <img class="veg" src="images/veg.jpg" alt="no image">
+                  <div class="flex1">
+                  <div>Tandoori Gobi <br><br>₹150</div>
+                  <div id="tandoorigobispace"></div>
+                  <div class="smallimg"> <img class="dosa" src="images/tandoorigobi.jpg" alt="no image"><div class="divadd"> <input onclick="tandoorigobiminus()" id="tandoorigobiminus" type="button" name="-" value="-"><span id="noftandoorigobi"></span><input onclick="tandoorigobiplus()" type="button" name="+" value="+" id="tandoorigobiplus"></div></div>
+                  </div>
+                  <hr class="hrbtw">
+                  <img class="veg" src="images/veg.jpg" alt="no image">
+                  <div class="flex1">
+                  <div>Sea Bee Spl Tikka <br><br>₹200</div>
+                  <div id="seabeespltikkaspace"></div>
+                  <div class="smallimg"> <img class="dosa" src="images/seabeespltikka.jpg" alt="no image"><div class="divadd"> <input onclick="seabeespltikkaminus()" id="seabeespltikkaminus" type="button" name="-" value="-"><span id="nofseabeespltikka"></span><input onclick="seabeespltikkaplus()" type="button" name="+" value="+" id="seabeespltikkaplus"></div></div>
+                  </div>
+                  <hr class="hrbtw">
+                  <img class="veg" src="images/veg.jpg" alt="no image">
+                  <div class="flex1">
+                  <div>Gobi Manchuria <br><br>₹120</div>
+                  <div id="gobimanchuriaspace"></div>
+                  <div class="smallimg"> <img class="dosa" src="images/gobimanchuria.jpg" alt="no image"><div class="divadd"> <input onclick="gobimanchuriaminus()" id="gobimanchuriaminus" type="button" name="-" value="-"><span id="nofgobimanchuria"></span><input onclick="gobimanchuriaplus()" type="button" name="+" value="+" id="gobimanchuriaplus"></div></div>
+                  </div>
+                  <hr class="hrbtw">
+                  <img class="veg" src="images/veg.jpg" alt="no image">
+                  <div class="flex1">
+                  <div>Gobi65 <br><br>₹120</div>
+                  <div id="gobi65space"></div>
+                  <div class="smallimg"> <img class="dosa" src="images/gobi65.jpg" alt="no image"><div class="divadd"> <input onclick="gobi65minus()" id="gobi65minus" type="button" name="-" value="-"><span id="nofgobi65"></span><input onclick="gobi65plus()" type="button" name="+" value="+" id="gobi65plus"></div></div>
+                  </div>
+                  <hr class="hrbtw">
+                  <img class="veg" src="images/veg.jpg" alt="no image">
+                  <div class="flex1">
+                  <div>Chilly Gobi <br><br>₹120</div>
+                  <div id="chillygobispace"></div>
+                  <div class="smallimg"> <img class="dosa" src="images/chillygobi.webp" alt="no image"><div class="divadd"> <input onclick="chillygobiminus()" id="chillygobiminus" type="button" name="-" value="-"><span id="nofchillygobi"></span><input onclick="chillygobiplus()" type="button" name="+" value="+" id="chillygobiplus"></div></div>
+                  </div>
+                  <hr class="hrbtw">  
+                  </td>
+          <td id="tdright">
+            <div id="wholebill">
+            <div class="topheading">
+              <div id="bill">BILL</div>
+            <p id="itemadded">Add Items</p>
+            </div>
+            <p id="noofitems"></p>
+            <div class="scroll-bg">
+            <div class="width2">
+                <div class="scroll">
+                <p><span id="dosa"></span><span id="clicktospace"></span><span id="dosaprice"></span></p>
+                <p><span id="puri"></span><span id="clicktospace"></span><span id="puriprice"></span></p>
+                <p><span id="idly"></span><span id="clicktospace"></span><span id="idlyprice"></span></p>
+                <p><span id="bajji"></span><span id="clicktospace"></span><span id="bajjiprice"></span></p>
+                <p><span id="vadapav"></span><span id="clicktospace"></span><span id="vadapavprice"></span></p>
+                <p><span id="pavbhaji"></span><span id="clicktospace"></span><span id="pavbhajiprice"></span></p>
+                <p><span id="vegfriedrice"></span><span id="clicktospace"></span><span id="vegfriedriceprice"></span></p>
+                <p><span id="jeerarice"></span><span id="clicktospace"></span><span id="jeerariceprice"></span></p>
+                <p><span id="gobifriedrice"></span><span id="clicktospace"></span><span id="gobifriedriceprice"></span></p>
+                <p><span id="mushroomfriedrice"></span><span id="clicktospace"></span><span id="mushroomfriedriceprice"></span></p>
+                <p><span id="schezwanfriedrice"></span><span id="clicktospace"></span><span id="schezwanfriedriceprice"></span></p>
+                <p><span id="paneerfriedrice"></span><span id="clicktospace"></span><span id="paneerfriedriceprice"></span></p>
+                <p><span id="mixedchinesefriedrice"></span><span id="clicktospace"></span><span id="mixedchinesefriedriceprice"></span></p>
+                <p><span id="eggfriedrice"></span><span id="clicktospace"></span><span id="eggfriedriceprice"></span></p>
+                <p><span id="chickenfriedrice"></span><span id="clicktospace"></span><span id="chickenfriedriceprice"></span></p>
+                <p><span id="schezwanchickenfriedrice"></span><span id="clicktospace"></span><span id="schezwanchickenfriedriceprice"></span></p>
+                <p><span id="muttonfriedrice"></span><span id="clicktospace"></span><span id="muttonfriedriceprice"></span></p>
+                <p><span id="mixnonvegfriedrice"></span><span id="clicktospace"></span><span id="mixnonvegfriedriceprice"></span></p>
+                <p><span id="paneertikka"></span><span id="clicktospace"></span><span id="paneertikkaprice"></span></p>
+                <p><span id="paneermalaitikka"></span><span id="clicktospace"></span><span id="paneermalaitikkaprice"></span></p>
+                <p><span id="mushroomtikka"></span><span id="clicktospace"></span><span id="mushroomtikkaprice"></span></p>
+                <p><span id="tandoorigobi"></span><span id="clicktospace"></span><span id="tandoorigobiprice"></span></p>
+                <p><span id="seabeespltikka"></span><span id="clicktospace"></span><span id="seabeespltikkaprice"></span></p> 
+                <p><span id="gobimanchuria"></span><span id="clicktospace"></span><span id="gobimanchuriaprice"></span></p> 
+                <p><span id="gobi65"></span><span id="clicktospace"></span><span id="gobi65price"></span></p>
+                <p><span id="chillygobi"></span><span id="clicktospace"></span><span id="chillygobiprice"></span></p>  
+                </div>
+            </div>
+            </div>
+            <p><span id="line" ><hr style="border-style: dashed; margin-left:5%;" width="40%"></span>
+            <p><span id="amount_name"></span><span id="totalamount"></span></p>
+            <p><span id="line"><hr style="border-style: dashed; margin-left:5%;" width="40%"></span>
+            </p>
+            <p><span id="gst"></span></p>
+            <p><span id="famount"></span></p>
+            </div>
+            <p>
+              <input type="button" onclick="printbill('wholebill')" id="printbill" value="Print Bill">
+            </p>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </div>
+    <script src="myscript.js"></script>
+  </body>
+</html>
